@@ -1,4 +1,4 @@
-name: Build code, run unit test, run SAST, SCA, DAST security scans for NodeJs Application in GitHub
+name: Build code, run unit test, run SAST, SCA, DAST security scans for NodeJs Application in GitHub Action
 on: push
 
 jobs:
@@ -19,8 +19,8 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization=dotnetgithubactionsorg
-          -Dsonar.projectKey=dotnetgithubactionsproject
+          -Dsonar.organization=syedabari-java-project
+          -Dsonar.projectKey=syedabari-java-project
   security:
     runs-on: ubuntu-latest
     needs: build
